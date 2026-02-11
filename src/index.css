@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-brand-darker text-gray-100 font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Custom gradient backgrounds */
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+  }
+  
+  .bg-gradient-purple {
+    background: linear-gradient(135deg, #0F172A 0%, #4C1D95 100%);
+  }
+  
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Heading styles */
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+  
+  .heading-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
+  }
+  
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold leading-tight;
+  }
+  
+  /* Body text */
+  .body-lg {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+  
+  .body-md {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+  
+  /* Button base */
+  .btn {
+    @apply px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center gap-2 min-h-[48px];
+  }
+  
+  .btn-primary {
+    @apply bg-brand-purple hover:bg-purple-600 text-white shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:border-brand-purple hover:shadow-lg hover:shadow-purple-500/10;
+  }
+  
+  /* Grid pattern background */
+  .bg-grid {
+    background-image: 
+      linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B5CF6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}
