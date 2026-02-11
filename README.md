@@ -201,9 +201,9 @@ Proprietary - APT OPS
 ## Support
 
 For questions or issues:
-- Email: info@aptops.com
+- Email: info@aptopsagency.com
 - Phone: (202) 993 7415
 
 ---
 
-**Built with ❤️ following the APT OPS Website Architect System Prompt v2.1**
+**Built with ❤️ following the APT OPS Website Architect System v2.1**
